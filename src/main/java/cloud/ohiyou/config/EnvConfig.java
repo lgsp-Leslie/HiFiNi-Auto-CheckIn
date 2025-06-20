@@ -4,7 +4,6 @@ public class EnvConfig {
 
     private final static EnvConfig INSTANCE = new EnvConfig();
     private final String serverChan;
-    private final String serverChanUid;
     private final String wxworkrobotkey;
     private final String wxWorkRobotMessageType;
     private final String dingTalkRobotKey;
@@ -18,7 +17,6 @@ public class EnvConfig {
     private EnvConfig() {
         cookie = System.getenv("COOKIE");
         serverChan = System.getenv("SERVER_CHAN");
-        serverChanUid = System.getenv("SERVER_CHAN_UID");
         wxworkrobotkey = System.getenv("WXWORK_WEBHOOK");
         wxWorkRobotMessageType = System.getenv().getOrDefault("WXWORK_MSG_TYPE", "markdown");
         dingTalkRobotKey = System.getenv("DINGTALK_WEBHOOK");
@@ -36,11 +34,7 @@ public class EnvConfig {
     public String getServerChan() {
         return serverChan;
     }
-
-    public Int getServerChanUid() {
-        return serverChanUid;
-    }
-
+    
     public String getWxworkrobotkey() {
         return wxworkrobotkey;
     }
