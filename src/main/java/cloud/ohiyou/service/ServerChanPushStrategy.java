@@ -31,12 +31,9 @@ public class ServerChanPushStrategy implements IMessagePushStrategy {
     @Override
     public void pushMessage(String title, String message) {
         String token = EnvConfig.get().getServerChan();
-        String u_id = EnvConfig.get().getServerChanUid();
-        System.out.println("u_id:" + u_id);
-        System.out.println("token:" + token);
         String url   = null;
         try {
-            url = "https://" + u_id + ".push.ft07.com/send/" + token + ".send1?title=" +
+            url = "https://8295.push.ft07.com/send/" + token + ".send1?title=" +
                     URLEncoder.encode(title, "UTF-8") +
                     "&desp=" + URLEncoder.encode(message, String.valueOf(StandardCharsets.UTF_8));
             
