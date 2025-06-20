@@ -4,6 +4,7 @@ public class EnvConfig {
 
     private final static EnvConfig INSTANCE = new EnvConfig();
     private final String serverChan;
+    private final String serverChanUid;
     private final String wxworkrobotkey;
     private final String wxWorkRobotMessageType;
     private final String dingTalkRobotKey;
@@ -34,6 +35,10 @@ public class EnvConfig {
 
     public String getServerChan() {
         return serverChan;
+    }
+
+    public String getServerChanUid() {
+        return serverChanUid;
     }
 
     public String getWxworkrobotkey() {
