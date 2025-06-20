@@ -37,7 +37,7 @@ public class EnvConfig {
         return serverChan;
     }
 
-    public String getServerChanUid() {
+    public Int getServerChanUid() {
         return serverChanUid;
     }
 
