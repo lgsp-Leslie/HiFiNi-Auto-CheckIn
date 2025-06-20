@@ -32,6 +32,7 @@ public class ServerChanPushStrategy implements IMessagePushStrategy {
     public void pushMessage(String title, String message) {
         String token = EnvConfig.get().getServerChan();
         String u_id = EnvConfig.get().getServerChanUid();
+        System.out.println(u_id);
         String url   = null;
         try {
             url = "https://" + u_id + ".push.ft07.com/send/" + token + ".send?title=" +
