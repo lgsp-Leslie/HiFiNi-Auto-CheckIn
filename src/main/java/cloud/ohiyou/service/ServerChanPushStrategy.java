@@ -33,9 +33,12 @@ public class ServerChanPushStrategy implements IMessagePushStrategy {
         String token = EnvConfig.get().getServerChan();
         String url   = null;
         try {
-            url = "https://sctapi.ftqq.com/" + token + ".send?title=" +
+            url = "https://8295.push.ft07.com/send/" + token + ".send?title=" +
                     URLEncoder.encode(title, "UTF-8") +
                     "&desp=" + URLEncoder.encode(message, String.valueOf(StandardCharsets.UTF_8));
+            // url = "https://sctapi.ftqq.com/" + token + ".send?title=" +
+            //         URLEncoder.encode(title, "UTF-8") +
+            //         "&desp=" + URLEncoder.encode(message, String.valueOf(StandardCharsets.UTF_8));
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }
