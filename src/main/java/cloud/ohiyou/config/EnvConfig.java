@@ -17,6 +17,7 @@ public class EnvConfig {
     private EnvConfig() {
         cookie = System.getenv("COOKIE");
         serverChan = System.getenv("SERVER_CHAN");
+        serverChanUid = System.getenv("SERVER_CHAN_UID");
         wxworkrobotkey = System.getenv("WXWORK_WEBHOOK");
         wxWorkRobotMessageType = System.getenv().getOrDefault("WXWORK_MSG_TYPE", "markdown");
         dingTalkRobotKey = System.getenv("DINGTALK_WEBHOOK");
